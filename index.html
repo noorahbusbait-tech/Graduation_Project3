@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>NGH | Future Forecasts</title>
+<script src="./Future_forecast2.js"></script>
+<link rel="stylesheet" href="./Future_forecast2.css" />
+
+<!-- Chart.js (for time series charts) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<div class="dash-header">
+    <div style="display:flex; gap:10px; align-items:center;">
+        <img src="./logo.png" class="dash-logo">
+        <button onclick="location.href='NGH_dashboard.html'" class="btn">
+            Dashboard
+        </button>
+
+        <button class="btn">
+            Department
+        </button>
+		<button onclick="location.href='Future forecast.html'" class="btn">
+		Future Forecast
+		</button>
+		<button onclick="logout()" class="btn btn-danger">Logout</button>
+	
+	</div>
+</div>
+
+<body class="dash-page">
+
+<main class="container">
+
+ <div class="forecast-hero">
+
+  <div>
+    <h1>Future Forecasts</h1>
+    <p>Predictions for patients bed occupancy for hospital capacity planning</p>
+  </div>
+
+</div>
+  <!-- KPI Preview (Optional but consistent with your design) -->
+
+
+  <!-- Charts Section -->
+  <div class="grid-2">
+
+    <!-- Length of Stay Chart -->
+    <div class="panel">
+      <h3>Bed Occupancy Forecast (Next week)</h3>
+      <canvas id="losChart" height="120"><img src="outputs/occupancychart.png">
+</canvas>
+      <p class="hint">Shows predicted patient length of stay trends over time.</p>
+    </div>
+
+    <!-- Bed Occupancy Chart -->
+    <div class="panel">
+      <h3>Bed Demand Forecast (Next 3 Weeks)</h3>
+      <canvas id="occupancyChart" height="120"><img src="outputs/demandchart.png"></canvas>
+      <p class="hint">Projected bed usage for the upcoming 14 days.</p>
+    </div>
+
+  </div>
+
+  <!-- Prediction Model Results -->
+  <div class="panel">
+    <h3>Prediction Model Results</h3>
+
+<div class="selected-box" id="patientPrediction">
+  <strong>Patient Status Prediction:</strong>
+</div>
+
+<div class="selected-box" id="occupancyResults">
+  <strong>Next 3 Weeks Bed Occupancy:</strong>
+</div>
+
+    </div>
+
+    <div class="alert-normal" id="forecastStatus">
+      Model Status: Ready
+    </div>
+  </div>
+
+</main>
+
+<footer>© National Guard Hospital</footer>
+
+
+</body>
+</html>

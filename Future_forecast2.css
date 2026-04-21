@@ -1,0 +1,318 @@
+body{
+    margin:0;
+    font-family:'Segoe UI';
+    background:#f4f8f6;
+}
+
+/* DASHBOARD */
+
+.dash-header{
+    background:#1f7a4c;
+    color:#fff;
+    padding:10px 25px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+
+.dash-logo{
+    width:40px;
+}
+
+.container{
+    padding:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.progress{
+    background:#eee;
+    height:8px;
+    border-radius:10px;
+}
+
+#bar{
+    background:#0b3c6d;
+    height:8px;
+    width:0%;
+    border-radius:10px;
+}
+
+.panel{
+    margin-top:30px;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn{
+    padding:10px 15px;
+    border:none;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+.btn-primary{
+    background:#0b3c6d;
+    color:#fff;
+}
+
+.btn-danger{
+    background:#c0392b;
+    color:#fff;
+}
+
+.btn-light{
+    background:#fff;
+    color:#000;
+}
+
+.alert-normal{
+    margin-top:20px;
+    padding:15px;
+    background:#e8f5e9;
+    border-left:5px solid green;
+}
+
+.alert-warning{
+    margin-top:20px;
+    padding:15px;
+    background:#fff3cd;
+    border-left:5px solid orange;
+}
+
+.alert-critical{
+    margin-top:20px;
+    padding:15px;
+    background:#f8d7da;
+    border-left:5px solid red;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+background: linear-gradient(180deg, #167A4A 0%, #0F5A37 100%);
+color: #ffffff;
+font-size: 14px;
+border-top: 1px solid rgba(255,255,255,0.06);
+box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+flex-wrap: wrap;
+}
+}
+
+
+
+/* ===================================================== */
+/*              CAPACITY PAGE ADD-ONS                   */
+/* ===================================================== */
+
+.grid-2{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:20px;
+  margin-top:20px;
+}
+
+@media (max-width: 1000px){
+  .cards{ grid-template-columns: repeat(2,1fr); }
+  .grid-2{ grid-template-columns: 1fr; }
+}
+
+.dept-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+
+.dept-table th, .dept-table td{
+  padding:12px;
+  border-bottom:1px solid #eee;
+  text-align:left;
+  font-size:14px;
+}
+
+.dept-table th{
+  background:#f7f9fc;
+  color:#0b3c6d;
+}
+
+.input-compact{
+  padding:10px 12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  min-width:180px;
+}
+
+.hint{
+  margin-top:12px;
+  color:#666;
+  font-size:13px;
+}
+
+.muted{
+  color:#666;
+  font-size:13px;
+}
+
+/* status chips */
+
+.chip{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.chip-low{
+  background:#e8f5e9;
+  color:#1b5e20;
+  border:1px solid #c8e6c9;
+}
+
+.chip-moderate{
+  background:#fff3cd;
+  color:#7a5a00;
+  border:1px solid #ffeeba;
+}
+
+.chip-high{
+  background:#ffe0b2;
+  color:#8a4b00;
+  border:1px solid #ffcc80;
+}
+
+.chip-critical{
+  background:#f8d7da;
+  color:#842029;
+  border:1px solid #f5c2c7;
+}
+
+/* selected & recommendations */
+
+.selected-box{
+  padding:12px;
+  border:1px dashed #cfd8dc;
+  border-radius:10px;
+  background:#fafafa;
+  margin:10px 0 16px 0;
+}
+
+.rec-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.rec-item{
+  padding:12px;
+  border:1px solid #eee;
+  border-radius:10px;
+  background:#fff;
+}
+
+.btn-sm{
+  padding:8px 10px;
+  font-size:13px;
+}
+
+/* modal */
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.modal{
+  background:#fff;
+  width:min(520px, 90%);
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.hidden{
+  display:none;
+}
+
+
+/* تحسين الكروت */
+.card{
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* تحسين النص داخل الكروت */
+.card h3{
+    margin-bottom:10px;
+    font-size:16px;
+    color:#555;
+}
+
+.card p{
+    font-size:26px;
+    font-weight:bold;
+    color:#0b3c6d;
+}
+
+
+/* تأثير الظل الأخضر عند المرور على الكروت */
+.card:hover{
+    transform: translateY(-5px); /* نفس التأثير السابق */
+    box-shadow: 0 8px 20px rgba(39, 138, 74, 0.4); /* ظل أخضر شفاف */
+    transition: 0.3s;
+}
+	
+	
+.btn {
+    padding:10px 15px;
+    border:none;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+.btn-primary{
+    background:#1f7a4c;
+    color:#fff;
+}
+
+.btn-danger{
+    background:#c0392b;
+    color:#fff;
+}
+
+
+.dash-logo{
+    width:35px;
+    height:auto;
+}
+
+	
+	
+	
